@@ -1,14 +1,15 @@
-body {
+body, hmtl{
   margin: 0px;
+  padding: 0px;
   font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .main {
   height: 949px;
-  background-size: cover;
-  background-image: url(/images/background.Jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 1000px) {
@@ -19,15 +20,6 @@ body {
   }
 }
 
-#text {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-top: 200px;
-  position: fixed;
-
-}
-
 .header {
   margin-top: 0px;
   width: 100%;
@@ -36,26 +28,36 @@ body {
 nav {
   float: right;
   margin-top: 25px;
+  position: absolute;
+  right: 50px;
+
 }
 
 .Navbar {
-  color: white;
+  color: black;
   font-size: 20px;
   margin-left: 25px;
   text-decoration: none;
+  float: left;
 }
 
 .Navbar:hover {
-  text-decoration: underline;
+  border: 2px solid #bc2a8d;
+  box-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 span {
   width: 100%;
+  color: black;
+  text-align: center;
 }
 
 h1 {
   font-size: 60px;
-  color: white;
+  color: black;
   text-align: Center;
   clear: both;
   padding-top: 200px;
@@ -63,8 +65,196 @@ h1 {
 
 h2 {
   font-size: 36px;
-  color: white;
+  color: black;
   text-align: Center;
   clear: both;
   margin-top: -25px;
+}
+
+.box {
+  border-radius: 20px;
+  height: 525px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 150px;
+  margin-left: 100px;
+  display: inline-block;
+}
+
+ul {
+  display: flex;
+  position: absolute;
+
+
+}
+
+#portfolio {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+
+.wrapper ul li {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  line-height: 75px;
+  margin: 0 5px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid black;
+  transition: all 0.5s ease;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Style the icons by setting its color and margin-top value to 20px
+to align it properly */
+.wrapper ul li .fa {
+  color: black;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect  and use transition property for smooth transition effect. */
+/*facebook*/
+.wrapper ul li:hover.facebook {
+  border: 5px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-facebook {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+/*twitter*/
+.wrapper ul li:hover.twitter {
+  border: 5px solid #00aced;
+  box-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-twitter {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+/* instagram */
+.wrapper ul li:hover.instagram {
+  border: 5px solid #bc2a8d;
+  box-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-instagram {
+  color: #bc2a8d;
+  text-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+/* github */
+.wrapper ul li:hover.github {
+  border: 5px solid #24292E;
+  box-shadow: 0 0 15px #24292E;
+  transition: all 0.5s ease;
+
+}
+
+.wrapper ul li:hover .fa-github {
+  color: #ff0000;
+  text-shadow: 0 0 15px #ff0000;
+  transition: all 0.5s ease;
+}
+
+/* media queries */
+
+@media screen and (max-width: 640px){
+  .wrapper {
+      width: 350px;
+  }
+  .wrapper ul li{
+      margin-top: 10px;
+  }
+  .wrapper ul li.github{
+      margin-left: 60px;
+      font-size: 32px;
+
+  }
+}
+
+
+@media screen and (max-width: 340px){
+  .wrapper {
+      width: 150px;
+  }
+  .wrapper ul li{
+      margin:15px;
+  }
+  .wrapper ul li.github{
+      margin-left: 15px;
+      font-size: 32px;
+  }
+}
+
+#test {
+  display: inline-block;
+  margin-left: 190px;
+  margin-bottom: 20px;
+}
+
+/* LOGIN */
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+  width: 10
+}
+
+
+
+button {
+    background-color: white;
+    color: black;
+    padding: 14px 20px;
+    margin-top: 10px;
+    margin-left: 70px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+
+button:hover {
+  border: 2px solid #bc2a8d;
+  box-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+.container {
+    padding: 350px;
+
+}
+
+input:focus {
+  outline: 1px solid #bc2a8d;
+
 }
